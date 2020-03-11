@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bogota Bootcamp example</title>
+  </head>
+  <body>
+    <div id = "root"></div>
+        <style>
+          img {
+            height: 100 px;
+            width: 50 px;
+          }
+        </style>
+  </body>
+  <script type="text/javascript">
+  	let nombres = ["G", "Alejandro", "Sebastian", "Diego", "David", "Granger", "Nikko"]
+    let root = document.querySelector("#root")
+    root.innerHTML = "Hola Class"
+
+    url = "https://aws.random.cat/meow"
+    async function gato(){
+      let response = await fetch(url)
+      let json = await response.json()
+      let file = json.file
+      let im = document.createElement("img")
+      im.setAttribute("src", file)
+      root.append(im)
+    }
+    gato()
+
+    for (g = 0; g<= 100; g++){
+      console.log(gato())
+    }
+
+  </script>
+</html>
